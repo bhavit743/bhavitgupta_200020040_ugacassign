@@ -1,0 +1,51 @@
+<div [class.alternate-button] = "isAlternatemode">
+<mat-toolbar color="primary" class="pcnav">
+  <span>PROBLEM 2</span>
+  <span class="spacer"></span>
+  <span><a href="#">Home</a></span>
+  <span><a href="#">About Us</a></span>
+  <span><a href="#">Student Directory</a></span>
+</mat-toolbar>
+<!---movile nav---->
+  <mat-toolbar color="primary" class="mobilenav">
+      <button class="hamburger" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+      <mat-menu #menu="matMenu" class="navlist">
+        <button mat-menu-item>Home</button>
+        <button mat-menu-item>About Us</button>
+        <button mat-menu-item>Student Directory</button>
+      </mat-menu>
+      <span>PROBLEM 2</span>
+</mat-toolbar>
+
+<h1>Student Directory</h1>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> 
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="rollnumber">
+    <th mat-header-cell *matHeaderCellDef> Roll Number</th>
+    <td mat-cell *matCellDef="let element"> {{element.rollnumber}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="branch">
+    <th mat-header-cell *matHeaderCellDef> Branch </th>
+    <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-slide-toggle (change)="themeChange()" class="toggle">Change Theme</mat-slide-toggle> 
+</div>
+
