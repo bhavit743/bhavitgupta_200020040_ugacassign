@@ -1,0 +1,453 @@
+*{
+    overflow-x: hidden;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    display: block;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}
+.loader span{
+    width: 150px;
+    height: 150px;
+    border-bottom: #56bda2 solid;
+    border-left: #304b78 solid;
+    border-top: #2494a2 solid;
+    border-right: #012551 solid;
+    border-width: 10px;
+    border-radius: 9999px;
+    position: absolute;
+    top: 250px;
+    left: 43%;
+    animation: rotation 2s linear infinite;
+    -moz-animation: rotation 2s linear infinite;
+    -webkit-animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+nav{
+    /*background-color: #56bda2;*/
+    background: linear-gradient(-150deg, #2494a2, #304b78);
+    color: white;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 30px 10px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: end;
+}
+nav li{
+    padding: 5px 15px;
+    transition: 0.2s ease;
+}
+nav li:hover{
+    background-color: #4f8e9e;
+    border-radius: 5px;
+}
+nav h1{
+    font-size: 2em;
+}
+/*mobile navigator*/
+.nav2{
+    display: none;
+}
+.menu-items{
+    display: none;
+}
+
+
+.userform{
+    margin: 110px auto;
+    padding-bottom: 30px;
+    /*box-shadow: 0px 0px 20px -4px #888888;*/
+    width: 30%;
+    border-radius: 10px 10px;
+    min-width: 350px;
+    background-color: black;
+    opacity: 0;
+    z-index: 2;
+    animation: entrance 2s forwards;
+    animation-iteration-count: 1;
+  /*  background: linear-gradient(-150deg, #fe0265, #523f81);*/
+    background: linear-gradient(-150deg, #56bda2, #2494a2, #304b78, #012551);
+}
+
+.userform p{
+    margin-left: 15px;
+    color: white;
+    margin-top: 20px;
+}
+.userform h1{
+    color: white;
+    padding: 15px 0px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.userform input{
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    margin: 0px 20px;
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 8px 10px 0px 0px;
+    outline: none;
+    color: white;
+}
+
+.inputbox label{
+    margin: 10px 0px 20px 20px;
+    color: white;
+}
+.login button{
+    background: transparent;
+    border: white solid;
+    width: 94%;
+    padding: 10px;
+    margin: 20px 15px;
+    border-radius: 9999px;
+    color: white;
+    min-width: 100px;
+}
+.login button:hover{
+    background: white;
+    color: indianred;
+}
+.userform a{
+    text-decoration: none;
+    color: white;
+}
+.error{
+    background: white;
+    color: indianred;
+    width: 55%;
+    margin-left: 15px;
+    padding-left: 5px;
+    border-radius: 9999px;
+}
+.changetext{
+    display: block;
+    margin-top: 100px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.changetext span::before{
+    content: "Hello";
+    font-size: 8vw;
+    font-weight: 500;
+    color: #304b78;
+    animation: change 40s linear infinite alternate;
+    -moz-animation: change 40s linear infinite alternate;
+    -webkit-animation: change 40s linear infinite alternate;
+}
+@keyframes change{
+    0%{
+        content: "Hello";
+        opacity: 1;
+    }
+    5%{
+        opacity: 0;
+    }
+    10%{
+        content: "नमस्ते";
+        opacity: 1;
+    }
+    15%{
+        opacity: 0;
+    }
+    20%{
+        content: "హలో";
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        content: "வணக்கம்";
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    40%{
+        content: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ";
+        opacity: 1;
+    }
+    45%{
+        opacity: 0;
+    }
+    50%{
+        content: "ہیلو";
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    60%{
+        content: "নমস্কাৰ";
+        opacity: 1;
+    }
+    65%{
+        opacity: 0;
+    }
+    70%{
+        content: "Hola";
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    80%{
+        content: "Bonjour";
+        opacity: 1;
+    }
+    85%{
+        opacity: 0;
+    }
+    90%{
+        content: "Hallo";
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        content: "Hello";
+        opacity: 1;
+    }
+
+}
+.welcome{
+    margin: 30px auto;
+    text-align: center;
+}
+.welcome h1{
+    font-size: 2.5vw;
+    color: #2494a2;
+    animation: changecol 20s infinite alternate;
+    -moz-animation: changecol 20s infinite alternate;
+    -webkit-animation: changecol 20s infinite alternate;
+}
+@keyframes changecol{
+    0%{
+        color: #2494a2;
+    }
+    33%{
+        color: #304b78;
+    }
+    66%{
+        color: #56bda2;
+    }
+    100%{
+        color: #012551;
+    }
+}
+.main{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: linear-gradient(-150deg, #56bda2, #2494a2, #304b78, #012551);
+    width: 70%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    animation: entrance 2s forwards;
+    -moz-animation: entrance 2s forwards;
+    -webkit-animation: entrance 2s forwards;
+    animation-iteration-count: 1;
+}
+@keyframes entrance{
+    100%{
+        opacity: 1;
+    }
+}
+.userinfo{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.greet{
+    font-size: 2em;
+}
+.restinfo ul{
+    list-style-type: none;
+    font-size: 1.4em;
+    margin-top: 20px;
+    line-height: 40px
+}
+
+.userphoto{
+    margin-top: 50px;
+    margin-left: 45px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.ppp{
+    display: none;
+}
+
+.logout{
+    background: transparent;
+    border: white solid;
+    width: 40%;
+    padding: 10px;
+    margin: 20px 15px;
+    border-radius: 9999px;
+    color: white;
+    min-width: 100px;
+}
+.logout:hover{
+    background: white;
+    color: indianred;
+}
+@media only screen and (max-width: 1210px){
+    .main{
+        display: block;
+        padding: 20px 0px;
+    }
+    .ppp{
+        display: block;
+        margin-top: 20px;
+    }
+    .userphoto{
+        margin-left: 0;
+    }
+    .userphoto img{
+        width: 30%;
+        border-radius: 9999px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .userinfo{
+        margin-left: 0;
+    }
+    .pp{
+        display: none;
+    }
+}
+@media only screen and (max-width: 835px){
+    .hamburger{
+        background-color: white;
+        width: 35px;
+        height: 2px;
+        margin: 10px 0px;
+    }
+    #one{
+        transition: 0.5s;
+    }
+    #one.show{
+        transform: rotateZ(45deg) translateY(8px);
+    }
+    #two{
+        transition: 0.5s;
+    }
+    #two.show{
+        transform: rotateZ(-45deg) translateY(-8px);;
+    }
+    .menu-icon{
+        position: absolute;
+        right: 20px;
+    }
+    .menu-items a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+    }
+    
+    .menu-items ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: end;
+    }
+    .menu-items li{
+        padding: 10px 15px;
+    }
+    .menu-items li:hover{
+        background-color: #4f8e9e;
+        color: white;
+    }
+    .nav2{
+        display: flex;
+    }
+    
+    .menu-items{
+        display: block;
+        opacity: 0;
+        z-index: -9999;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0px 0px 15px -4px #888888;
+        transition: all ease 0.5s;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+    }
+    .menu-items.show{
+        display: block;
+        opacity: 1;
+        z-index: 9;
+    }
+    .menu-items ul{
+        display: block;
+    }
+    .menu-items ul li{
+        width: 100%;
+    }
+    .nav1{
+        display: none;
+    }
+    .greet{
+        font-size: 4vw;
+    }
+    .restinfo{
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .userform input{
+        width: 300px;
+    }
+    .welcome h1{
+        font-size: 20px;
+        color: #2494a2;
+        animation: changecol 20s infinite alternate;
+    }
+    .changetext span::before{
+        content: "Hello";
+        font-size: 50px;
+        font-weight: 500;
+        color: #304b78;
+        animation: change 40s linear infinite alternate;
+    }
+    .changetext{
+        margin-top: 200px;
+    }
+}
