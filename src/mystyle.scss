@@ -1,0 +1,35 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$mystyle-primary: mat-palette($mat-cyan, 700 );
+$mystyle-accent:  mat-palette($mat-teal, 300, 400);
+$mystyle-warn:    mat-palette($mat-red);
+
+$mystyle-theme: mat-light-theme((
+  color: (
+    primary: $mystyle-primary,
+    accent: $mystyle-accent,
+    warn: $mystyle-warn,  
+  )
+));
+
+@include angular-material-theme($mystyle-theme);
+
+//alternate theme
+
+$mystyle2-primary: mat-palette($mat-teal, 300);
+$mystyle2-accent:  mat-palette($mat-teal, 100, 300, 400);
+$mystyle2-warn:    mat-palette($mat-red);
+
+$mystyle2-theme: mat-dark-theme((
+  color: (
+    primary: $mystyle2-primary,
+    accent: $mystyle2-accent,
+    warn: $mystyle2-warn,  
+  )
+));
+
+.alternate-button{
+    @include angular-material-theme($mystyle2-theme);
+}

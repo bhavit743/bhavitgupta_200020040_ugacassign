@@ -1,0 +1,57 @@
+@import '~@angular/material/theming';
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mobilenav{
+    display: none;
+}
+
+@media  only screen and (max-width: 569px){
+    .mobilenav{
+        display: block;
+        padding-top: 15px;
+    }
+    .pcnav{
+        display: none;
+    }
+}
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+h1{
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: teal solid;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+span{
+    padding: 5px 10px;
+    color: white;
+}
+span a{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+}
+span a:hover{
+    border-bottom: 2px solid;
+}
+
+.toggle{
+    margin-top: 40px;
+    margin-left: 30px;
+    color: "primary";
+}
