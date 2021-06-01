@@ -11,14 +11,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT username, password, user_id FROM userinfo where username='$username'";
+    $sql = "SELECT username, password FROM userinfo where username='$username'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
        $user_data = mysqli_fetch_assoc($result);
        
         if($user_data['password'] === $password){
-            $_SESSION['user_id'] = $user_data['user_id'];
             $_SESSION['username'] = $user_data['username'];
             $_SESSION['password'] = $user_data['password'];
             header('Location: myaccount.php');

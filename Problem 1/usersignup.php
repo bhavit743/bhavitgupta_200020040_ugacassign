@@ -9,7 +9,6 @@ session_start();
         $email_id = $_POST['email'];
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $user_id = rand(1, 20);
 
         $sql_u = "SELECT * FROM userinfo WHERE username='$username'";
         $result_u = $conn->query($sql_u);
@@ -17,8 +16,8 @@ session_start();
                  $user_dupli = "Username already Taken!";
         }
         else{
-            $sql = "INSERT INTO userinfo (user_id,fullname,username,DOB,email_id,password) 
-            VALUES ('$user_id','$fullname', '$username', '$dob', '$email_id', '$password')";
+            $sql = "INSERT INTO userinfo (fullname,username,DOB,email_id,password) 
+            VALUES ('$fullname', '$username', '$dob', '$email_id', '$password')";
             $result = $conn->query($sql);
             header('Location: userlogin.php');
             die; 

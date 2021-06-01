@@ -2,13 +2,13 @@
 session_start();
 
 include("connection.php");
-if(!isset($_SESSION['user_id'])){
+if(!isset($_SESSION['username'])){
     header('Location: userlogin.php');
     die;
 }
 
-$loguser = $_SESSION['user_id'];
-$sql = "SELECT user_id, username, fullname, DOB, email_id FROM userinfo where user_id = '$loguser'";
+$loguser = $_SESSION['username'];
+$sql = "SELECT id, username, fullname, DOB, email_id FROM userinfo where username = '$loguser'";
 $result = $conn -> query($sql);
 
 $user_data = mysqli_fetch_assoc($result);
@@ -27,9 +27,9 @@ $user_data = mysqli_fetch_assoc($result);
 
     <body>
     <style>
-            *{
+            /* *{
                 overflow-y: hidden;
-            }
+            } */
         </style>
     <div class="loader">
         <span></span>
